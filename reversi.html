@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"></meta>
+    <title>黑白棋</title>
+    <link rel="stylesheet" href="styles/reversi.css">
+  </head>
+
+  <body>
+    <p class="page-title">黑白棋</p>
+
+    <div class="main">
+      <!-- 棋盤 -->
+      <div class="board">
+        <div class="grids js-grids">
+          <!-- 結束畫面 -->
+          <div class="end-game-container">
+            <div class="end-game-content">
+              <div class="score-text js-score-text"></div>
+              <div class="result-text js-result-text"></div>
+              <div>
+                <button class="reset-button js-reset-button">新的一局</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 顯示比分 -->
+          <div class="black-score-container">
+            <div class="black-display"></div>
+            <div class="black-score js-black-score">0</div>
+          </div>
+
+          <div class="white-score-container">
+            <div class="white-display"></div>
+            <div class="white-score js-white-score">0</div>
+          </div>
+
+          <!-- row1 -->
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+  
+          <!-- row2 -->
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          
+  
+          <!-- row3 -->
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <!-- 棋盤上的的點 -->
+          <div class="single-grid-dot js-single-grid">
+            <div class="piece">
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid-dot js-single-grid">
+            <div class="piece">
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+  
+          <!-- row4 -->
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+  
+          <!-- row5 -->
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+  
+          <!-- row6 -->
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+  
+          <!-- row7 -->
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <!-- 棋盤上的的點 -->
+          <div class="single-grid-dot js-single-grid">
+            <div class="piece">
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid-dot js-single-grid">
+            <div class="piece">
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+  
+          <!-- row8 -->
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+          <div class="single-grid js-single-grid">
+            <div class="piece"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="turn-container">
+          <div class="turn-content">
+            <div class="turn-message js-turn-message"><span class="turn js-turn"></span>turn</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+
+    <script src="scripts/reversi.js"></script>
+  </body>
+</html>

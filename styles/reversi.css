@@ -1,0 +1,209 @@
+body {
+  font-family: Arial;
+  background-color: lightgray;
+  
+
+}
+
+.page-title {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+}
+
+.grids {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 8px;
+  row-gap: 8px;
+  width: 600px;
+  height: 600px;
+  background-color: black;
+  justify-content: center;
+  position: relative;
+}
+
+/* 結束畫面 */
+.end-game-container {
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 1;
+  display: none;
+}
+
+.is-end-game .end-game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-game-content {
+  width: 240px;
+  height: 170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-text {
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+}
+
+.result-text {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.reset-button {
+  background-color: orange;
+  border: 5px solid red;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 40px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.reset-button:hover {
+  background-color: rgb(251, 194, 87);
+  border-color: rgb(158, 0, 0);
+  color: rgb(80, 80, 80);
+}
+
+.reset-button:active {
+  background-color: rgb(0, 90, 255);
+  border-color: rgb(0, 255, 255);
+  color: white;
+}
+
+/* 顯示比分 */
+.black-score-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -90px;
+  padding-top: 20px;
+}
+
+.black-display {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: black;
+}
+
+.white-score-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: -90px;
+  padding-top: 20px;
+}
+
+.white-display {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.black-score,
+.white-score {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.single-grid, 
+.single-grid-dot {
+  background-color: rgb(0, 163, 0);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 50px;
+  min-height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.15s;
+}
+
+.single-grid:hover, 
+.single-grid-dot:hover {
+  background-color: rgb(0, 252, 0);
+}
+
+.single-grid:active, 
+.single-grid-dot:active {
+  background-color: rgba(0, 252, 0, 0.27);
+}
+
+.single-grid-dot {
+  position: relative;
+}
+
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: black;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+}
+
+.piece {
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+}
+
+.piece-black {
+  background-color: black;
+}
+
+.piece-white {
+  background-color: white;
+}
+
+.turn-message {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.turn {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.white-turn .turn{
+  background-color: white;
+}
+
